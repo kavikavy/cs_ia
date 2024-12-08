@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' 'unsafe-inline'">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <title>App Login</title>
+</head>
+    <body>
+        <div class="container">
+            <div class="form-container">
+                <h2 id="form-header">Sign In</h2>
+                <form id="signinForm">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="signin-username" name="username" required autocomplete="current-username">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="signin-password" name="password" required
+                            autocomplete="current-password">
+                    </div>
+                    <button type="submit">Sign In</button>
+                </form>
+                <div class="link-container">
+                    <a href="#" id="forgot-password-link" onclick="window.location.href='/forget-password.html'">Forgot
+                        Password?</a>
+                </div>
+                <p id="switch-mode-text">Don't have an account? <a href="#"
+                        onclick="window.location.href='/signup.html'">Sign Up</a></p>
+            </div>
+        </div>
+    </body>
+     <script src="js/index.js"></script>
+</html>

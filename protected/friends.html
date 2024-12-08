@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src * data 'unsafe-inline'; connect-src 'self' https://api.edamam.com 'unsafe-inline'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="protected/css/friends.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Friends</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Friends</h1>
+        
+            <!-- Form to add a friend -->
+            <form id="addFriendForm">
+                <input type="text" id="friend-username" placeholder="Enter friend's username" name = "recepientId"required>
+                <button type="submit">Send Friend Request</button>
+            </form>
+        
+            <!-- Section to display pending friend requests -->
+            <h2>Pending Friend Requests</h2>
+            <div id="friend-requests"></div>
+        
+            <!-- Section to display friends list -->
+            <h2>Your Friends</h2>
+            <ul id="friendsList"></ul>
+        
+            <div class="tab">
+                <button class="tablinks" onclick="window.location.href='leaderboard.html'">Leaderboard</button>
+            </div>
+        
+            <div class="navbar">
+                <a class="active" href="/home.html">
+                    <i class="fa fa-fw fa-home"></i> Home
+                </a>
+                <a href="/challenges.html">
+                    <i class="fa fa-fw fa-bullseye"></i> Challenges
+                </a>
+                <a href="/consumption.html">
+                    <i class="fa fa-fw fa-leaf"></i> Consumption
+                </a>
+                <a href="/recipes.html">
+                    <i class="fa fa-fw fa-cutlery"></i> Recipes
+                </a>
+                <a href="/friends.html">
+                    <i class="fa fa-fw fa-user"></i> Friends
+                </a>
+                <a href="/index.html">
+                    <i class="fa fa-fw fa-sign-out"></i> Logout
+                </a>
+            </div>
+        </div>                        
+    </body>
+    <script src="protected/js/friends.js"></script>
+</html>

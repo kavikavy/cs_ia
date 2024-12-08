@@ -1,0 +1,15 @@
+const conversionFactors = {
+    transport: { petrol: 2.39, diesel: 2.62 },
+    meat: {beef_herd: 60.00, 
+        lamb_mutton: 24.00, 
+        cheese: 21.00, 
+        beef_dairy_herd: 21.00, 
+        prawns_farmed: 12.00, 
+        pig_meat: 7.00,
+        poultry_meat: 6.00,
+        fish_farmed: 5.00,
+        eggs: 4.50,
+        fish_wild: 3.00
+        },
+    electricity: 0.079,
+};

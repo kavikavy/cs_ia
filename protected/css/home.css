@@ -1,0 +1,117 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0; /* Remove default margin */
+}
+
+.container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 600px;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.co2-summary {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.co2-summary p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #28a745; /* Green color for emphasis */
+}
+
+.bar-graph {
+  margin-top: 20px;
+}
+
+.bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.bar-label {
+ 
+  font-weight: bold; /* Make bar labels bold */
+  color: #333; /* Darker text for better readability */
+}
+
+.bar {
+  height: 30px;
+  background-color: #28a745; /* Green color for bars */
+  border-radius: 5px;
+  margin: 0 10px;
+ transition: width 0.5s ease;
+}
+
+.bar-value {
+
+  text-align: right;
+  font-weight: bold; /* Make bar values bold */
+  color: #333; /* Darker text for better readability */
+}
+
+/* Add responsiveness */
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /* Make the container responsive */
+  }
+
+  .bar {
+    height: 15px; /* Slightly smaller bar height on small screens */
+  }
+}
+
+/* Bottom Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  padding: 5px 0;
+  border-radius: 5px;
+  margin-top: 10px; /* Add spacing between content and navbar */
+}
+
+.navbar a {
+  flex: 1;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+.navbar a.active {
+  background-color: #1e7e34; /* Active link color */
+}
+
+.fa {
+  margin-right: 8px;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' 'unsafe-inline';font-src 'self' https://fonts.gstatic.com">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="css/signup.css">
+  <title>Sign Up</title>
+  <script>
+    async function handleSignUp(event) {
+      event.preventDefault(); // Prevent form from refreshing the page
+
+      // Collect form data
+      const username = document.getElementById('signup-username').value;
+      const firstname = document.getElementById('signup-firstname').value;
+      const lastname = document.getElementById('signup-lastname').value;
+      const email = document.getElementById('signup-email').value;
+      const password = document.getElementById('signup-password').value;
+
+      // Send data to the server
+      const response = await fetch('/api/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, firstname, lastname, email, password }),
+      });
+
+      const message = await response.text();
+
+      if (response.ok) {
+        alert('Sign-Up Successful!');
+        // Redirect to login page
+        window.location.href = '/index.html';
+      } else {
+        alert('Error: ' + message);
+      }
+    }
+  </script>
+</head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h2 id="form-header">Sign Up </h2>
+        <form id="signUpForm" onsubmit="handleSignUp(event)">
+          <br><br>
+          <div class="input-group">
+            <label for="Username">Username:</label>
+            <input type="text" id="signup-username" required>
+          </div>
+          <br><br>
+          <div class="input-group">
+            <label for="FirstName">First Name:</label>
+            <input type="text" id="signup-firstname" required>
+          </div>
+          <br><br>
+          <div class="input-group">
+            <label for="Lastname">Last Name:</label>
+            <input type="text" id="signup-lastname" required>
+          </div>
+          <br><br>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="signup-email" required>
+          </div>
+          <br><br>
+          <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="signup-password" required>
+          </div>
+          <br><br>
+          <div class="input-group">
+            <label for="retype-password">Retype Password:</label>
+            <input type="password" id="retype-password" required>
+          </div>
+          <br><br>
+          <button type="submit" id="sign-up-btn">Sign Up</button>
+          <br><br>
+          <p id="switch-mode-text">Have an account? <a href="#"
+            onclick="window.location.href='/index.html'">Sign In</a></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

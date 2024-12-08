@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src * data 'unsafe-inline'; connect-src 'self' https://api.edamam.com 'unsafe-inline'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="protected/css/recipes.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Recipes</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Find Sustainable Recipes</h1>
+            
+            <!-- Search form -->
+            <form id="recipe-search-form" onsubmit="return false;">
+                <div class="input-group">
+                    <label for="query">Search for a Recipe:</label>
+                    <input type="text" id="query" placeholder="e.g., vegetarian, low carbon">
+                </div>
+    
+                <button type="submit" onclick="searchRecipes()">Search</button>
+            </form>
+
+            <div class="filters">
+                <h3>Filters:</h3>
+                <label for="diet">Diet:</label>
+                <select id="diet">
+                    <option value="">Any</option>
+                    <option value="balanced">Balanced</option>
+                    <option value="high-fiber">High-Fiber</option>
+                    <option value="high-protein">High-Protein</option>
+                    <option value="low-carb">Low-Carb</option>
+                    <option value="low-sodium">Low-Sodium</option>
+                </select>
+                
+                <label for="health">Health:</label>
+                <select id="health">
+                    <option value="">Any</option>
+                    <option value="balanced">Balanced</option>
+                    <option value="high-fiber">High-Fiber</option>
+                    <option value="high-protein">High-Protein</option>
+                    <option value="low-carb">Low-Carb</option>
+                    <option value="low-sodium">Low-Sodium</option>
+                </select>
+
+                <label for="meal-type">Meal Type:</label>
+                <select id="meal-type">
+                    <option value="">Any</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </div>
+    
+        <!-- Results Section -->
+        <div class = "recipe-container">
+            <div id="recipe-results">
+                <h2>Recipes:</h2>
+                <ul id="recipe-list">
+                    <!-- Recipe results will be put here -->
+                </ul>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <a class="active" href="/home.html">
+                <i class="fa fa-fw fa-home"></i> Home
+            </a>
+            <a href="/challenges.html">
+                <i class="fa fa-fw fa-bullseye"></i> Challenges
+            </a>
+            <a href="/consumption.html">
+                <i class="fa fa-fw fa-leaf"></i> Consumption
+            </a>
+            <a href="/recipes.html">
+                <i class="fa fa-fw fa-cutlery"></i> Recipes
+            </a>
+            <a href="/friends.html">
+                <i class="fa fa-fw fa-user"></i> Friends
+            </a>
+            <a href="/index.html">
+                <i class="fa fa-fw fa-sign-out"></i> Logout
+            </a>
+        </div>
+        </div>
+    </body>
+    <script src="protected/js/recipes.js"></script>
+</html>

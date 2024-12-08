@@ -1,0 +1,132 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 5px;
+  height: 100%;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: auto;   /* Allow vertical scroll */
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 10px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td {
+  vertical-align: top;
+}
+
+.recipe-container {
+  padding: 10px;
+  max-height: 60vh; /* Keep it within the viewport height */
+  overflow-y: scroll;  /* Allow scrolling inside the container */
+  background-color: #f5f5f5; /* Light background for readability */
+}
+
+.recipe-results {
+  margin-top: 20px;
+}
+
+button, input {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+img {
+  max-width: 100%; /* Make sure images scale within the container */
+  height: auto;
+  display: block;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+/* Bottom Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  padding: 5px 0;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.navbar a {
+  flex: 1;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+.navbar a.active {
+  background-color: #1e7e34; /* Active link color */
+}
+
+.fa {
+  margin-right: 8px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src * data 'unsafe-inline'; connect-src 'self' https://api.edamam.com 'unsafe-inline'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="protected/css/add_challenge.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Add New challenge</title>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Add a New Challenge</h2>
+            <form id="insertChallengeForm">
+                   <div class="input-group">
+                    <label for="name">Challenge Name</label>
+                    <input type="text" id="challenge-name" name="challengeName" required >
+                   <!-- Dropdown to Select Category Type -->
+                    <label for="challenge-type">Category</label>
+                    <select id="challenge-type" onchange="showSpecificFields()" name = "categoryName" required>
+                      <option value="">Select a Category</option>
+                    </select>
+                  </div>
+                  <div id="dynamic-fields"></div>
+
+                  <label for="start-date">Start Date:</label>
+                  <input type="date" id="start-date" name = "startDate" required>
+                  
+                  <label for="end-date">End Date:</label>
+                  <input type="date" id="end-date" name = "endDate" required>
+                <button type="submit">Add Challenge</button>
+            
+            </form>
+
+            <p id="responseMessage"></p>
+
+            <div class="navbar">
+                <a class="active" href="/home.html">
+                    <i class="fa fa-fw fa-home"></i> Home
+                </a>
+                <a href="/challenges.html">
+                    <i class="fa fa-fw fa-bullseye"></i> Challenges
+                </a>
+                <a href="/consumption.html">
+                    <i class="fa fa-fw fa-leaf"></i> Consumption
+                </a>
+                <a href="/recipes.html">
+                    <i class="fa fa-fw fa-cutlery"></i> Recipes
+                </a>
+                <a href="/friends.html">
+                    <i class="fa fa-fw fa-user"></i> Friends
+                </a>
+                <a href="/index.html">
+                    <i class="fa fa-fw fa-sign-out"></i> Logout
+                </a>
+            </div>
+        </div>
+    </body>
+    <script src="protected/js/add_challenge.js"></script>
+</html>
